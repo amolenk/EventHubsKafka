@@ -1,0 +1,249 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Description/@EntryValue">Send order as JSON</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Shortcut/@EntryValue">_producer_sendJson</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=0FEFF67C35D0A54C94141F373577CC20/Text/@EntryValue">    await producer.ProduceAsync("orders", new Message&lt;Null, string&gt;
+    {
+        Value = JsonSerializer.Serialize(order)
+    });
+
+    return Results.Accepted();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Shortcut/@EntryValue">_wrapper_serialize</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=260886AF614D0A4FB756119C6BC85B37/Text/@EntryValue">    public byte[] Serialize(T o, SerializationContext context)
+    {
+        MessageContent content = _innerSerializer.Serialize&lt;MessageContent, T&gt;(o);
+
+        var schemaIdBytes = Encoding.UTF8.GetBytes(content.ContentType.ToString());
+        context.Headers.Add("content-type", schemaIdBytes);
+        return content.Data.ToArray();
+    }</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Description/@EntryValue">Producer</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Shortcut/@EntryValue">_producer</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=36C5683DA7DF354186F7DCA0A9B1304E/Text/@EntryValue">    var config = new ProducerConfig
+    {
+        BootstrapServers = kafkaConfig.BootstrapUrl,
+        SaslMechanism = SaslMechanism.OAuthBearer,
+        SaslOauthbearerMethod = SaslOauthbearerMethod.Oidc,
+        SaslOauthbearerClientId = kafkaConfig.OAuthClientId,
+        SaslOauthbearerClientSecret = kafkaConfig.OAuthClientSecret,
+        SaslOauthbearerTokenEndpointUrl = kafkaConfig.OAuthTokenEndpointUrl,
+        SaslOauthbearerScope = kafkaConfig.OAuthScope,
+        SecurityProtocol = SecurityProtocol.SaslSsl
+    };
+
+    using var producer = new ProducerBuilder&lt;Null, string&gt;(config)
+        .Build();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Description/@EntryValue">Connect to Registry</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Shortcut/@EntryValue">_registry_client</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42A4A9BA8CDCA8409C2A4F2CC32B1096/Text/@EntryValue">    var credential = new ClientSecretCredential(kafkaConfig.OAuthTenantId, kafkaConfig.OAuthClientId,
+         kafkaConfig.OAuthClientSecret);
+     
+    var schemaRegistryClient = new SchemaRegistryClient(kafkaConfig.FullyQualifiedNamespace, credential);
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Description/@EntryValue">Order API endpoint</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Shortcut/@EntryValue">_api_order</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Text/@EntryValue">app.MapPost("/order", async (Order order, IOptions&lt;KafkaConfiguration&gt; options) =&gt;
+{
+    var kafkaConfig = options.Value;
+
+
+});
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5ADD12E18AF3BC4DB3E6525FFF447BAA/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Description/@EntryValue">Order record</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Shortcut/@EntryValue">_order</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6C73BD3D180AB248AA4B976F3ABB06C7/Text/@EntryValue">public record Order(string OrderId, string ItemId, int ItemQuantity);
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Description/@EntryValue">AVRO schema for Shipment Notification</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Shortcut/@EntryValue">_avro_schema</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8BBC2E9E4FF2FB4B8854C14A7EDADFCA/Text/@EntryValue">{
+  "namespace": "WebApi",
+  "name": "ShipmentNotification",
+  "type": "record",
+  "fields": [
+    { "name": "order_id", "type": "string" },
+    { "name": "location", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Shortcut/@EntryValue">_wrapper_deserialize</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9F1945F486D50341B3AD97064B6979F9/Text/@EntryValue">    public T Deserialize(ReadOnlySpan&lt;byte&gt; data, bool isNull, SerializationContext context)
+    {
+        if (isNull) return default;
+        
+        var schemaIdBytes = context.Headers.FirstOrDefault(h =&gt; h.Key == "content-type")
+            .GetValueBytes();
+        var contentType = Encoding.UTF8.GetString(schemaIdBytes);
+        
+        var content = new MessageContent
+        {
+            Data = new BinaryData(data.ToArray()),
+            ContentType = contentType
+        };
+
+        return _innerSerializer.Deserialize&lt;T&gt;(content);
+    }</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Shortcut/@EntryValue">_registery_serializer</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A11FE382F143AC4FAE2C745B360C8D5F/Text/@EntryValue">    var serializer = new SchemaRegistryAvroSerializer(schemaRegistryClient, "default", 
+         new SchemaRegistryAvroSerializerOptions { AutoRegisterSchemas = true });</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Shortcut/@EntryValue">_api_shipment</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B3DC2785C504294FAA165007BBA12413/Text/@EntryValue">app.MapPost("/shipment", async (ShipmentNotification shipment, IOptions&lt;KafkaConfiguration&gt; options) =&gt;
+{
+    var kafkaConfig = options.Value;
+    
+    var config = new ProducerConfig
+    {
+        BootstrapServers = kafkaConfig.BootstrapUrl,
+        SaslMechanism = SaslMechanism.OAuthBearer,
+        SaslOauthbearerMethod = SaslOauthbearerMethod.Oidc,
+        SaslOauthbearerClientId = kafkaConfig.OAuthClientId,
+        SaslOauthbearerClientSecret = kafkaConfig.OAuthClientSecret,
+        SaslOauthbearerTokenEndpointUrl = kafkaConfig.OAuthTokenEndpointUrl,
+        SaslOauthbearerScope = kafkaConfig.OAuthScope,
+        SecurityProtocol = SecurityProtocol.SaslSsl
+    };
+
+    using var producer = new ProducerBuilder&lt;Null, ShipmentNotification&gt;(config)
+        .Build();
+
+    await producer.ProduceAsync("shipments", new Message&lt;Null, ShipmentNotification&gt;
+    {
+        Value = shipment
+    });
+
+    return Results.Accepted();
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Shortcut/@EntryValue">_wrapper</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CE306D54C41AD74E8861A14DEF839451/Text/@EntryValue">using System.Text;
+using Azure.Messaging;
+using Confluent.Kafka;
+using Microsoft.Azure.Data.SchemaRegistry.ApacheAvro;
+
+namespace WebApi;
+
+public class KafkaSchemaRegistryAvroSerializer&lt;T&gt; : ISerializer&lt;T&gt;, IDeserializer&lt;T&gt;
+{
+    private readonly SchemaRegistryAvroSerializer _innerSerializer;
+    
+    public KafkaSchemaRegistryAvroSerializer(SchemaRegistryAvroSerializer innerSerializer)
+    {
+        _innerSerializer = innerSerializer;
+    }
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Description/@EntryValue">Consume endpoint</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Shortcut/@EntryValue">_api_consume</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F1041EA956FE4646A535F558D9998971/Text/@EntryValue">app.MapGet("/order/{partitionId}", (int partitionId, IOptions&lt;KafkaConfiguration&gt; options) =&gt;
+{
+    var kafkaConfig = options.Value;
+    
+    var config = new ConsumerConfig
+    {
+        BootstrapServers = kafkaConfig.BootstrapUrl,
+        SaslMechanism = SaslMechanism.OAuthBearer,
+        SaslOauthbearerMethod = SaslOauthbearerMethod.Oidc,
+        SaslOauthbearerClientId = kafkaConfig.OAuthClientId,
+        SaslOauthbearerClientSecret = kafkaConfig.OAuthClientSecret,
+        SaslOauthbearerTokenEndpointUrl = kafkaConfig.OAuthTokenEndpointUrl,
+        SaslOauthbearerScope = kafkaConfig.OAuthScope,
+        SecurityProtocol = SecurityProtocol.SaslSsl,
+        GroupId = kafkaConfig.ConsumerGroupId,
+        AutoOffsetReset = AutoOffsetReset.Earliest
+    };
+
+    using var consumer = new ConsumerBuilder&lt;Ignore, string&gt;(config)
+        .Build();
+    
+    consumer.Assign(new TopicPartition("orders", new Partition(partitionId)));
+
+    var result = consumer.Consume(TimeSpan.FromSeconds(3));
+    if (result is not null)
+    {
+        consumer.Commit(result);
+
+        return Results.Ok(JsonSerializer.Deserialize&lt;Order&gt;(result.Message.Value));
+    }
+
+    return Results.NoContent();
+});</s:String></wpf:ResourceDictionary>
