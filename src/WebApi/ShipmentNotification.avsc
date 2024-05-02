@@ -1,0 +1,10 @@
+{
+  "namespace": "WebApi",
+  "name": "ShipmentNotification",
+  "type": "record",
+  "fields": [
+    { "name": "order_id", "type": "string" },
+    { "name": "location", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}
