@@ -5,14 +5,14 @@ POST {{WebApi_HostAddress}}/order/
 Content-Type: application/json
 
 {
-  "orderId": "4",
-  "itemId": "A",
+  "orderId": "1",
+  "itemId": "Star Wars Millennium Falcon",
   "itemQuantity": 1
 }
 
 ###
 
-GET {{WebApi_HostAddress}}/order/1
+GET {{WebApi_HostAddress}}/order/0
 
 ###
 
